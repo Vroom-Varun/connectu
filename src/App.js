@@ -17,10 +17,16 @@ function App() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="/discoverpeople">Discover People</Nav.Link>
-                <Nav.Link href="/profile">Profile</Nav.Link>
-                <Nav.Link href="#deets">Messages</Nav.Link>
-                <Nav.Link href="/createevent"><Button variant="success">Create Event</Button></Nav.Link>
+                <div className="link-wrapper">
+                  <Nav.Link href="/discoverpeople">Discover People</Nav.Link>
+                </div>
+                <div className="link-wrapper">
+                  <Nav.Link href="/profile">Profile</Nav.Link>
+                </div>
+                <div className="link-wrapper">
+                  <Nav.Link href="#deets">Messages</Nav.Link>
+                </div>
+                <Nav.Link href="/createevent"><Button size="sm" variant="success">Create Event</Button></Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
