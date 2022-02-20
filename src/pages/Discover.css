@@ -1,17 +1,19 @@
-.App {
-    text-align: center;
-  }
-
-.card {
-    height: 20vh;
+.card{
+    margin-left: 10vh;
 }
 
-.cards {
+.title-wrapper{
+    margin-top: 10vh;
     text-align: left;
-    padding: 5vh;
+    margin-left: 10vh;
+    margin-bottom: 10vh;
 }
 
+.h1{
+    font-family: Helvetica, sans-serif;
+    font-size: 50%;
+}
 
-.card-position{
-    margin: 10vh;
+.button-wrapper{
+    margin: 2vh;
 }
