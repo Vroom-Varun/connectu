@@ -23,9 +23,16 @@
 }
 
 #EventBox {
-    margin-left: auto;
-    margin-right: auto;
     height: 100%;
-    width: 60%;
-    
+}
+
+.card{
+    margin-left: 10vh;
+    height: 100%;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
 }

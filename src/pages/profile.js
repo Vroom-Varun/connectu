@@ -5,7 +5,6 @@ import { Card, Button } from "react-bootstrap";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Popup from 'reactjs-popup';
-import SimpleSlider from './SimpleSlider';
 
 const Profile = () => 
 {
