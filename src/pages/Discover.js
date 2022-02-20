@@ -1,29 +1,51 @@
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, ListGroup, ListGroupItem } from "react-bootstrap";
 import "./Discover.css"
+import React, { useState, useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import SimpleSlider from "./SimpleSlider"
 import Popup from 'reactjs-popup';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
+
+
 
 
 const Discover = () => {
-    const cardInfo = [
-        { is_event: true, eventname: "Volleyball Open Gym", image: "", contact_info: "Varun Sreepathy", id: 1, src: "https://img.olympicchannel.com/images/image/private/t_16-9_360-203_2x/f_auto/v1536936974/primary/exvzqcvorticinejmmel" },
-        { is_event: true, eventname: "Hackathon", image: "", contact_info: "Danhiel Vu", id: 2, src: "https://news.microsoft.com/wp-content/uploads/prod/sites/45/2019/07/Teamshacking@Microsoft2019hackathon_-960x630.jpg" },
-        { is_event: true, eventname: "Soccery Intramural", image: "", contact_info: "Zackary Holly", id: 3, src: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2021_39/3509790/211001-nwsl-matches-al-1259.jpg" }
-    ];
+    const [eventList, setEventList] = useState([]);
 
+    useEffect(() => {
+        const url = "http://localhost:8000/events";
+        const fetchData = async () => {
+            try {
+                const response = await fetch(url, { mode: 'cors' });
+                const json = await response.json();
+                console.log(json);
+                setEventList(json)
+            } catch (error) {
+                console.log("error", error);
+            }
+        };
+        fetchData();
+    }, []);
     function RenderEvents(props) {
         return (
             <Card style={{ width: '18rem' }} key={props.index}>
                 <Card.Img variant="top" src={props.src} />
                 <Card.Title>{props.name}</Card.Title>
-                <Card.Body>{props.contact_info}</Card.Body>
+                <Card.Body>{props.first_name} {props.last_name}</Card.Body>
                 <div className="button-wrapper">
                     <Popup trigger={<Button variant="primary" onClick={() => (console.log("hey i'm in hell"))}>Expand Event</Button>} modal>
                         <Card style={{ width: '30rem' }} >
-                            <Card.Body>Hey I got it working!</Card.Body>
+                            <Card.Body>{props.name}</Card.Body>
+                            <ListGroup variant="flush">
+                                <ListGroup.Item><b>Start Time: </b> {props.starttime}</ListGroup.Item>
+                                <ListGroup.Item><b>End Time: </b>{props.endtime}</ListGroup.Item>
+                                <ListGroup.Item><b>Date: </b>{props.date}</ListGroup.Item>
+                                <ListGroup.Item><b>Location: </b> {props.loc}</ListGroup.Item>
+                                <ListGroup.Item><b>Interested: </b>{props.interested} <FontAwesomeIcon icon={faHeart} /></ListGroup.Item>
+                            </ListGroup>
                         </Card>
                     </Popup>
                 </div>
@@ -38,9 +60,9 @@ const Discover = () => {
             <SimpleSlider></SimpleSlider>
             <div className="connections-box">
                 <Row xs={1} md={3} className="g-4">
-                    {cardInfo.map(card =>
+                    {eventList.map(event =>
                         <Col>
-                            <RenderEvents index={card.id} contact_info={card.contact_info} name={card.eventname} src={card.src}></RenderEvents>
+                            <RenderEvents index={event.event_id} first_name={event.first_name} last_name={event.last_name}name={event.event_name} src={event.event_image_url} starttime={event.start_time} endtime={event.end_time} date={event.begin_date} loc={event.event_site} interested={event.interested}></RenderEvents>
                         </Col>
                     )}
                 </Row>
