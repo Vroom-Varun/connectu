@@ -11,6 +11,7 @@ import {
 import reportWebVitals from './reportWebVitals';
 import Discover from './pages/Discover'
 import Profile from './pages/profile'
+import CreateEvent from './pages/createEvent'
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route path="/" element={<App />}>
           <Route path="discoverpeople" element={<Discover />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="createevent" element={<CreateEvent />} />
         </Route>
       </Routes>
     </BrowserRouter>
