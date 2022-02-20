@@ -60,7 +60,7 @@ const Profile = () =>
         <h1>Bork Borkington Borkers</h1>
         <text>Hello, my name is Bork and I love to chase tennis balls. I also love to chew on bones and sniff other dogs.</text>
       </article>
-      <h2>Bill's Recent Events</h2>
+      <h2>Borks' Recent Events</h2>
       <section id="EventBox">
         <Row xs={1} md={3} className="g-4">
           {cardInfo.map(card =>

@@ -22,6 +22,10 @@
     padding-left: 50px;
 }
 
+h2 {
+    margin-bottom: 50px;
+}
+
 #EventBox {
     height: 100%;
 }
