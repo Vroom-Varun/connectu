@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import Box from '@material-ui/core/Box';
 import Card from 'react-bootstrap/Card';
 import Text from 'react-bootstrap/FormText'
 import Button from 'react-bootstrap/Button'
@@ -51,9 +50,6 @@ const Profile = () =>
       </div>
     </Box>
     */}
-      <Box color="white" bgcolor="palevioletred" p={1} height={50} fontSize={30}>
-        Profile page
-      </Box>
       <div className="Pic">
         <div className="ProfileBox">
           <img src={profilePicture} height="120px" marginTop='20%'/>  
