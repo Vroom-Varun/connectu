@@ -1,0 +1,17 @@
+.App {
+    text-align: center;
+  }
+
+.card {
+    height: 20vh;
+}
+
+.cards {
+    text-align: left;
+    padding: 5vh;
+}
+
+
+.card-position{
+    margin: 10vh;
+}
