@@ -31,29 +31,9 @@ const Profile = () =>
 
   return(
     <div style={{ marginLeft: '0%', marginTop: '0px', width: '100%', height: '60px' }}>
-    {/*
-    <Box color="white" bgcolor="palevioletred" p={1} height={200}>
-      {error && <p className="errorMsg">File not supported</p>}
-      <div className="imgPreview">
-        {!imgPreview&&(
-          <>
-          <p>Add and image</p>
-          <label htmlFor="fileUpload" className="customFileUpload">
-            Choose file
-            </label>
-            <input type="file" id="fileUpload" onChange={handleImageChange} />
-            <span>
-              (jpg, jpg or png)
-            </span>
-          </>
-          
-        )}
-      </div>
-    </Box>
-    */}
-      <Box color="white" bgcolor="palevioletred" p={1} height={50} fontSize={30}>
-        Profile page
-      </Box>
+        <div className="text-wrapper">
+            <h1>Your Profile</h1>
+        </div>
       <div className="Pic">
         <div className="ProfileBox">
           <img src={profilePicture} height="120px" marginTop='20%'/>  

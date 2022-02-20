@@ -26,3 +26,15 @@
     padding-top: 30px;
 
 }
+
+.text-wrapper{
+    margin-top: 10vh;
+    text-align: left;
+    margin-left: 10vh;
+    margin-bottom: 10vh;
+}
+
+.h1{
+    font-family: Helvetica, sans-serif;
+    font-size: 50%;
+}
