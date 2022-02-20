@@ -23,9 +23,6 @@ function App() {
                 <div className="link-wrapper">
                   <Nav.Link href="/profile">Profile</Nav.Link>
                 </div>
-                <div className="link-wrapper">
-                  <Nav.Link href="#deets">Messages</Nav.Link>
-                </div>
                 <Nav.Link href="/createevent"><Button size="sm" variant="success">Create Event</Button></Nav.Link>
               </Nav>
             </Navbar.Collapse>
