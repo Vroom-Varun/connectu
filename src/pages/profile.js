@@ -65,7 +65,7 @@ const Profile = () =>
         <Row xs={1} md={3} className="g-4">
           {cardInfo.map(card =>
             <Col>
-              <RenderEvents index={card.id} top_tags={card.top_tags} name={card.name}></RenderEvents>
+              <RenderEvents index={card.id} contact_info={card.contact_info} name={card.eventname} src={card.src}></RenderEvents>
             </Col>
           )}
         </Row>
