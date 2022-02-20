@@ -3,24 +3,29 @@ import "./Discover.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import SimpleSlider from "./SimpleSlider"
+import Popup from 'reactjs-popup';
+
 
 const Discover = () => {
     const cardInfo = [
-        { is_event: true, name: "Anthony", image: "", top_tags: "a, b, c", id: 1 },
-        { is_event: true, name: "Amy", image: "", top_tags: "a, b, c", id: 2 },
-        { is_event: true, name: "Casey", image: "", top_tags: "a, b, c", id: 3 }
+        { is_event: true, eventname: "Volleyball Open Gym", image: "", contact_info: "Varun Sreepathy", id: 1, src: "https://img.olympicchannel.com/images/image/private/t_16-9_360-203_2x/f_auto/v1536936974/primary/exvzqcvorticinejmmel" },
+        { is_event: true, eventname: "Hackathon", image: "", contact_info: "Danhiel Vu", id: 2, src: "https://news.microsoft.com/wp-content/uploads/prod/sites/45/2019/07/Teamshacking@Microsoft2019hackathon_-960x630.jpg" },
+        { is_event: true, eventname: "Soccery Intramural", image: "", contact_info: "Zackary Holly", id: 3, src: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2021_39/3509790/211001-nwsl-matches-al-1259.jpg" }
     ];
 
-    function RenderCard(props) {
+    function RenderEvents(props) {
         return (
             <Card style={{ width: '18rem' }} key={props.index}>
+                <Card.Img variant="top" src={props.src} />
                 <Card.Title>{props.name}</Card.Title>
-                <Card.Body>{props.top_tags}</Card.Body>
+                <Card.Body>{props.contact_info}</Card.Body>
                 <div className="button-wrapper">
-                    <Button variant="primary">+</Button>
-                </div>
-                <div className="button-wrapper">
-                    <Button variant="primary">see profile</Button>
+                    <Popup trigger={<Button variant="primary" onClick={() => (console.log("hey i'm in hell"))}>Expand Event</Button>} modal>
+                        <Card style={{ width: '30rem' }} >
+                            <Card.Body>Hey I got it working!</Card.Body>
+                        </Card>
+                    </Popup>
                 </div>
             </Card>
         );
@@ -28,13 +33,14 @@ const Discover = () => {
     return (
         <div>
             <div className="title-wrapper">
-                <h1>Discover Connections</h1>
+                <h1>Discover Popular Events</h1>
             </div>
+            <SimpleSlider></SimpleSlider>
             <div className="connections-box">
                 <Row xs={1} md={3} className="g-4">
                     {cardInfo.map(card =>
                         <Col>
-                                <RenderCard index={card.id} top_tags={card.top_tags} name={card.name}></RenderCard>
+                            <RenderEvents index={card.id} contact_info={card.contact_info} name={card.eventname} src={card.src}></RenderEvents>
                         </Col>
                     )}
                 </Row>
