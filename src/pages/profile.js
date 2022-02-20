@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import './profile.css'
-import { ListGroup } from 'react-bootstrap';
+import { Card, Button } from "react-bootstrap";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const Profile = () => 
 {
+  /*
   const [imgPreview, setImgPreview] = useState(null);
   const [error, setError] = useState(false);
 
@@ -22,6 +25,28 @@ const Profile = () =>
       setError(true);
     }
   }
+  */
+
+  const cardInfo = [
+    { is_event: true, name: "Anthony", image: "", top_tags: "a, b, c", id: 1 },
+    { is_event: true, name: "Amy", image: "", top_tags: "a, b, c", id: 2 },
+    { is_event: true, name: "Casey", image: "", top_tags: "a, b, c", id: 3 }
+  ];
+
+  function RenderCard(props) {
+    return (
+      <Card style={{ width: '18rem' }} key={props.index}>
+        <Card.Title>{props.name}</Card.Title>
+        <Card.Body>{props.top_tags}</Card.Body>
+        <div className="button-wrapper">
+          <Button variant="primary">+</Button>
+        </div>
+        <div className="button-wrapper">
+          <Button variant="primary">see profile</Button>
+        </div>
+      </Card>
+    );
+  }
 
   return(
     <body> 
@@ -34,10 +59,13 @@ const Profile = () =>
       </article>
       <h2>Bill's Recent Events</h2>
       <section id="EventBox">
-        <div class="event"><img src="https://picsum.photos/seed/picsum/200/300" alt="Event 1" class="EventPic"/></div>
-        <div class="event"><img src="https://picsum.photos/seed/picsum/200/300" alt="Event 2" class="EventPic"/></div>
-        <div class="event"><img src="https://picsum.photos/seed/picsum/200/300" alt="Event 3" class="EventPic"/></div>
-        <div class="event"><img src="https://picsum.photos/seed/picsum/200/300" alt="Event 4" class="EventPic"/></div>
+        <Row xs={1} md={3} className="g-4">
+          {cardInfo.map(card =>
+            <Col>
+              <RenderCard index={card.id} top_tags={card.top_tags} name={card.name}></RenderCard>
+            </Col>
+          )}
+        </Row>
       </section>
     </body>
   );
