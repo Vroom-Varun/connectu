@@ -2,8 +2,9 @@ import React, {useState} from 'react'
 import Box from '@material-ui/core/Box';
 import Card from 'react-bootstrap/Card';
 import Text from 'react-bootstrap/FormText'
+import Button from 'react-bootstrap/Button'
 import donutPic from './../images/donut.png'
-
+import './profile.css'
 const Profile = () => 
 {
   const [imgPreview, setImgPreview] = useState(null);
@@ -52,17 +53,30 @@ const Profile = () =>
         Profile page
       </Box>
       <div className="Pic">
-        <img src={profilePicture} height="150px" marginTop='20%'/>
-        <p>
-          Donut
-        </p>
+        <div className="ProfileBox">
+          <img src={profilePicture} height="120px" marginTop='20%'/>  
+        </div>
+      </div>
+      <div className='user-details'>
+        <p>Damien O'Neil</p>
+        <p>3rd Year (20)</p>
+        <p>Seattle University</p>
       </div>
       
-      
-    
+      <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" />
+        <Card.Body>
+          <Card.Title>Card Title</Card.Title>
+          <Card.Text>
+            Some quick example text to build on the card title and make up the bulk of
+            the card's content.
+          </Card.Text>
+          <Button variant="primary">Go somewhere</Button>
+        </Card.Body>
+      </Card>
     </div>
+    
   );
 }
-
 export default Profile;
 

@@ -1,5 +1,20 @@
 .Pic {
     text-align: left;
-    justify-content: left;
+    justify-content:flex-start;
+    align-content: left;
+    flex-direction:row;
+    padding-left: 20px;
+    padding-top: 20px;
+    position: absolute;
+}
+
+.ProfileBox{
+    justify-content: flex-start;
     flex-direction: row;
+}
+
+.userDetails{
+    justify-content: flex-start;
+    flex-direction: row;
+    text-align: left;
 }
