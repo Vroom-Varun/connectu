@@ -18,3 +18,11 @@
     flex-direction: row;
     text-align: left;
 }
+
+.interests{
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: left;
+    padding-top: 30px;
+
+}

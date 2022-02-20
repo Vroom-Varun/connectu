@@ -4,7 +4,9 @@ import Card from 'react-bootstrap/Card';
 import Text from 'react-bootstrap/FormText'
 import Button from 'react-bootstrap/Button'
 import donutPic from './../images/donut.png'
+import "bootstrap/dist/css/bootstrap.min.css";
 import './profile.css'
+import { ListGroup } from 'react-bootstrap';
 const Profile = () => 
 {
   const [imgPreview, setImgPreview] = useState(null);
@@ -62,18 +64,32 @@ const Profile = () =>
         <p>3rd Year (20)</p>
         <p>Seattle University</p>
       </div>
+      <div>
+      <div className='interests'>
+        <Card style={{width:'18rem'}}>
+          <Card.Header as="h5">Interests</Card.Header>
+          <ListGroup variant="flush">
+            <ListGroup.Item>Volleyball</ListGroup.Item>
+            <ListGroup.Item>Coding</ListGroup.Item>
+            <ListGroup.Item>Robotics</ListGroup.Item>
+          </ListGroup>
+        </Card>
+
+        <Card style={{width:'18rem'}}>
+          <Card.Header as="h5">Groups</Card.Header>
+          <ListGroup variant="flush">
+            <ListGroup.Item>Volleyball Club</ListGroup.Item>
+            <ListGroup.Item>SU ACM</ListGroup.Item>
+            <ListGroup.Item>SU Robotics</ListGroup.Item>
+          </ListGroup>
+        </Card>
+
+      </div>
+      </div>
       
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
-        </Card.Body>
-      </Card>
+
+      
+      
     </div>
     
   );
