@@ -11,9 +11,9 @@ let clairshacking = "I am integrating the API and doing hacker stuff :)"
 const Profile = () => 
 {
   const cardInfo = [
-    { is_event: true, eventname: "Volleyball Open Gym", image: "", contact_info: "Varun Sreepathy", id: 1, src: "https://img.olympicchannel.com/images/image/private/t_16-9_360-203_2x/f_auto/v1536936974/primary/exvzqcvorticinejmmel" },
-    { is_event: true, eventname: "Hackathon", image: "", contact_info: "Danhiel Vu", id: 2, src: "https://news.microsoft.com/wp-content/uploads/prod/sites/45/2019/07/Teamshacking@Microsoft2019hackathon_-960x630.jpg" },
-    { is_event: true, eventname: "Soccery Intramural", image: "", contact_info: "Zackary Holly", id: 3, src: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2021_39/3509790/211001-nwsl-matches-al-1259.jpg" }
+    { is_event: true, eventname: "Volleyball Open Gym", image: "", contact_info: "Bork Borkington Borkers", id: 1, src: "https://img.olympicchannel.com/images/image/private/t_16-9_360-203_2x/f_auto/v1536936974/primary/exvzqcvorticinejmmel" },
+    { is_event: true, eventname: "Hackathon", image: "", contact_info: "Bork Borkington Borkers", id: 2, src: "https://news.microsoft.com/wp-content/uploads/prod/sites/45/2019/07/Teamshacking@Microsoft2019hackathon_-960x630.jpg" },
+    { is_event: true, eventname: "Soccery Intramural", image: "", contact_info: "Bork Borkington Borkers", id: 3, src: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2021_39/3509790/211001-nwsl-matches-al-1259.jpg" }
   ];
 
   function RenderEvents(props) {
