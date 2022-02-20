@@ -57,8 +57,8 @@ const Profile = () =>
         <img src="https://picsum.photos/id/237/200/300" alt="Profile Picture" id="ProfilePic"/>
       </div>
       <article id="BioBox">
-        <h1>Bill Billington Billards</h1>
-        <text>"Hello, my name is Bill and I love some thicc peaches. They are my favourite fruits."</text>
+        <h1>Bork Borkington Borkers</h1>
+        <text>Hello, my name is Bork and I love to chase tennis balls. I also love to chew on bones and sniff other dogs.</text>
       </article>
       <h2>Bill's Recent Events</h2>
       <section id="EventBox">
