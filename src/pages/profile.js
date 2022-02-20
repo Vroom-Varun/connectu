@@ -6,28 +6,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Popup from 'reactjs-popup';
 
+let clairshacking = "I am integrating the API and doing hacker stuff :)"
+
 const Profile = () => 
 {
-  /*
-  const [imgPreview, setImgPreview] = useState(null);
-  const [error, setError] = useState(false);
-
-
-  const handleImageChange = (e) =>{
-    const selected = e.target.files[0];
-    const TYPES_ALLOWED = ["image/png", "image/jpeg", "image/jpg"];
-    if(selected && TYPES_ALLOWED.includes(selected.type)){
-      let reader = new FileReader();
-      reader.onloadend = () => {
-        setImgPreview(selected);
-      }
-      reader.readAsDataURL(selected);
-    } else {
-      setError(true);
-    }
-  }
-  */
-
   const cardInfo = [
     { is_event: true, eventname: "Volleyball Open Gym", image: "", contact_info: "Varun Sreepathy", id: 1, src: "https://img.olympicchannel.com/images/image/private/t_16-9_360-203_2x/f_auto/v1536936974/primary/exvzqcvorticinejmmel" },
     { is_event: true, eventname: "Hackathon", image: "", contact_info: "Danhiel Vu", id: 2, src: "https://news.microsoft.com/wp-content/uploads/prod/sites/45/2019/07/Teamshacking@Microsoft2019hackathon_-960x630.jpg" },
