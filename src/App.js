@@ -21,7 +21,6 @@ function App() {
               <Nav className="me-auto">
                 <Nav.Link href="/discoverpeople">Discover People</Nav.Link>
                 <Nav.Link href="/profile">Profile</Nav.Link>
-                <Nav.Link href="#deets">Messages</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
