@@ -1,29 +1,36 @@
-import {Card, Button} from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import "./Discover.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const Discover = () => {
     const cardInfo = [
-        {is_event: true, name: "Anthony", image: "", top_tags: "a, b, c"},
-        {is_event: true, name: "Anthony", image: "", top_tags: "a, b, c"},
-        {is_event: true, name: "Anthony", image: "", top_tags: "a, b, c"}
+        { is_event: true, name: "Anthony", image: "", top_tags: "a, b, c", id: 1 },
+        { is_event: true, name: "Amy", image: "", top_tags: "a, b, c", id: 2 },
+        { is_event: true, name: "Casey", image: "", top_tags: "a, b, c", id: 3 }
     ];
 
-    const renderCard = (card, index) => {
+    function RenderCard (props){
         return (
-            <Card key={index}>
+            <Card  style={{ width: '18rem' }} key={props.index}>
                 {/* <Card.Img>src={card.image}</Card.Img> */}
-                <Card.Title>{card.name}</Card.Title>
-                <Card.Body>{card.top_tags}</Card.Body>
+                <Card.Title>{props.name}</Card.Title>
+                <Card.Body>{props.top_tags}</Card.Body>
                 <Button variant="primary">+</Button>
                 <Button variant="primary">see profile</Button>
             </Card>
         );
     }
-    return(
-        <div className="Discover">  
+    return (
+        <div className="Discover">
             <h1>AHHHHH</h1>
-            <div class="cards">
-                {cardInfo.map(renderCard)}
+            <div className="cards">
+                {/* {cardInfo.map(renderCard())} */}
+                {cardInfo.map(card =>
+                    <div className="card-position">
+                        <RenderCard index={card.id} top_tags={card.top_tags} name={card.name}></RenderCard>
+                    </div>
+                )}
             </div>
         </div>
     );
